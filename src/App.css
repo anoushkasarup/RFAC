@@ -1,38 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  /*text-align: center;*/
+  background-color: #00b2e4;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #00b2e4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-logo {
+  /*height: 40vmin;*/
+  position: absolute;
+  left: 70px;
+  top: 30px;
+  width: 500px;
+  height: 150px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1{
+  color: #0c4164;
+  font-family: "Rockwell";
+  font-size: 5rem;
+  position: absolute;
+  left: 630px;
+  top: 30px;
+}
+
+/* For Vertical Line in header */
+.vl {
+  border-left: 6px solid #0c4164;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+  left: 590px;
+}
+
+
+.dropdown-all{
+  color: #0c4164;
+}
+
+.dropdown-assessmentType{
+  position: absolute;
+  top:230px;
+  left:150px;
+}
+
+.dropdown-race{
+  position: absolute;
+  top: 230px;
+  left:800px
+}
+
+.dropdown-gender{
+  position: absolute;
+  top: 230px;
+  left: 500px
+}
+
+.dropdown-typeOfLoss{
+  position: absolute;
+  top: 315px;
+  left: 150px;
+}
+
+.dropdown-level{
+  position: absolute;
+  top:315px;
+  left: 500px
+}
+
+.dropdown-prePost{
+  position: absolute;
+  top:315px;
+  left: 800px;
+}
+
+button{
+  font-family: sans-serif;
+  background-color: #f7df37;
+  color: #ff3d00;
+  padding: 10px 60px;
+  position: absolute;
+  right: 150px;
+  top: 315px;
+  font-size: 20px;
+  font-weight: bold;
+  border-color: #0c4164;
+  border-radius: 4px;
+  border-width: 1px;
+}
+
+/* shadow button code: https://www.w3schools.com/css/css3_buttons.asp */
+.buttonShadow:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
