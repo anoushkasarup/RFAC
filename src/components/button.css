@@ -1,0 +1,19 @@
+button{
+    font-family: sans-serif;
+    background-color: #f7df37;
+    color: #ff3d00;
+    padding: 10px 60px;
+    position: absolute;
+    right: 150px;
+    top: 315px;
+    font-size: 20px;
+    font-weight: bold;
+    border-color: #0c4164;
+    border-radius: 4px;
+    border-width: 1px;
+  } 
+  
+/* shadow button code: https://www.w3schools.com/css/css3_buttons.asp */
+.buttonShadow:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+} 
