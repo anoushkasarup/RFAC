@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.dropdown-all{
+    color: #0c4164;
+  }
+  
+.dropdown-assessmentType{
+    position: absolute;
+    top:230px;
+    left:150px;
+}
+  
+.dropdown-race{
+    position: absolute;
+    top: 230px;
+    left:800px
+}
+  
+.dropdown-gender{
+    position: absolute;
+    top: 230px;
+    left: 500px
+}
+  
+.dropdown-typeOfLoss{
+    position: absolute;
+    top: 315px;
+    left: 150px;
+}
+  
+.dropdown-level{
+    position: absolute;
+    top:315px;
+    left: 500px
+}
+  
+.dropdown-prePost{
+    position: absolute;
+    top:315px;
+    left: 800px;
+}
