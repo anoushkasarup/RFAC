@@ -4,9 +4,9 @@ button{
     color: #ff3d00;
     padding: 10px 60px;
     position: absolute;
-    right: 150px;
-    top: 315px;
-    font-size: 20px;
+    right: 10%;
+    top: 38%;
+    font-size: 1.7vw;
     font-weight: bold;
     border-color: #0c4164;
     border-radius: 4px;

@@ -19,7 +19,6 @@ function App(){
          
             <hr width="95%" 
                 align="center"
-                size="10"  
                 color=" #0c4164" noshade />
 
         </header>

@@ -1,41 +1,53 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+.dropdown-all .p-multiselect-label {
+  color: #0c4164;
+  font-size: 0.9vw;
+}
 
-.dropdown-all{
-    color: #0c4164;
-  }
-  
-.dropdown-assessmentType{
-    position: absolute;
-    top:230px;
-    left:150px;
+.dropdown-assessmentType {
+  position: absolute;
+  top: 23%;
+  left: 10%;
+  width: 17%;
+  height: 5%;
 }
-  
-.dropdown-race{
-    position: absolute;
-    top: 230px;
-    left:800px
+
+
+.dropdown-race {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  width: 17%;
+  height: 5%;
 }
-  
-.dropdown-gender{
-    position: absolute;
-    top: 230px;
-    left: 500px
+
+.dropdown-gender {
+  position: absolute;
+  top: 23%;
+  left: 30%;
+  width: 17%;
+  height: 5%;
 }
-  
-.dropdown-typeOfLoss{
-    position: absolute;
-    top: 315px;
-    left: 150px;
+
+.dropdown-typeOfLoss {
+  position: absolute;
+  top: 31.5%;
+  left: 10%;
+  width: 17%;
+  height: 5%;
 }
-  
-.dropdown-level{
-    position: absolute;
-    top:315px;
-    left: 500px
+
+.dropdown-level {
+  position: absolute;
+  top: 31.5%;
+  left: 30%;
+  width: 17%;
+  height: 5%;
 }
-  
-.dropdown-prePost{
-    position: absolute;
-    top:315px;
-    left: 800px;
+
+.dropdown-prePost {
+  position: absolute;
+  top: 31.5%;
+  left: 50%;
+  width: 17%;
+  height: 5%;
 }

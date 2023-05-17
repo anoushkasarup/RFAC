@@ -16,26 +16,33 @@
 
 .App-logo {
   position: absolute;
-  left: 70px;
-  top: 30px;
-  width: 500px;
-  height: 150px;
+  left: 5%;
+  top: 4%;
+  aspect-ratio: 10/3;
+  width: 33%;
 }
 
 h1{
+  position: absolute;
   color: #0c4164;
   font-family: "Rockwell";
-  font-size: 5rem;
-  position: absolute;
-  left: 630px;
-  top: 30px;
+  font-size: 5vw;
+  left: 42%;
+  top: 4.5%;
 }
 
 /* For Vertical Line in header */
 .vl {
-  border-left: 6px solid #0c4164;
-  height: 150px;
   position: absolute;
-  top: 30px;
-  left: 590px;
+  border-left: 0.5vw solid #0c4164;
+  aspect-ratio: 1/18;
+  top: 5%;
+  left: 39%;
+}
+
+hr {
+  position: absolute;
+  aspect-ratio: 180/1;
+  justify-content: center;
+  top: 48%;
 }

@@ -57,36 +57,36 @@ function Dropdown(){
 
     return (
     
-    <div className="dropdown-all"> 
+    <div className="dropdown-all">
 
         <div className="dropdown-gender">
             <MultiSelect value={selectedGender} onChange={(e) => setSelectedGender(e.value)} options={genders} optionLabel="name" 
-            placeholder="Gender" maxSelectedLabels={3} className="w-full md:w-20rem" />
+            placeholder="Gender" maxSelectedLabels={3} style={{ width: "100%", height: '100%' }} />
         </div>
 
         <div className="dropdown-assessmentType">
             <MultiSelect value={selectedAssessmentType} onChange={(e) => setSelectedAssessmentType(e.value)} options={assessmentTypes} optionLabel="name" 
-            placeholder="Assessment Type" maxSelectedLabels={3} className="w-full md:w-20rem" />
+            placeholder="Assessment Type" maxSelectedLabels={3} style={{ width: "100%", height: '100%' }}/>
         </div>
 
         <div className="dropdown-typeOfLoss">
             <MultiSelect value={selectedTypeLoss} onChange={(e) => setSelectedTypeLoss(e.value)} options={typeOfLoss} optionLabel="name" 
-            placeholder="Type of loss" maxSelectedLabels={3} className="w-full md:w-20rem" />
+            placeholder="Type of loss" maxSelectedLabels={3} style={{ width: "100%", height: '100%' }}/>
         </div>
 
         <div className="dropdown-race">
             <MultiSelect value={selectedRace} onChange={(e) => setSelectedRace(e.value)} options={races} optionLabel="name" 
-            placeholder="Race/Ethnicity" maxSelectedLabels={2} className="w-full md:w-20rem" />
+            placeholder="Race/Ethnicity" maxSelectedLabels={2} style={{ width: "100%", height: '100%' }}/>
         </div>
 
         <div className="dropdown-level">
             <MultiSelect value={selectedLevel} onChange={(e) => setSelectedLevel(e.value)} options={levels} optionLabel="name" 
-            placeholder="Assessment Level" maxSelectedLabels={1} className="w-full md:w-20rem" />
+            placeholder="Assessment Level" maxSelectedLabels={1} style={{ width: "100%", height: '100%' }}/>
         </div>
 
         <div className="dropdown-prePost">
             <MultiSelect value={selectedPrePost} onChange={(e) => setSelectedPrePost(e.value)} options={prePost} optionLabel="name" 
-            placeholder="Pre/Post Data" maxSelectedLabels={3} className="w-full md:w-20rem" selectionLimit = {1} showSelectAll={false}/>
+            placeholder="Pre/Post Data" maxSelectedLabels={3} selectionLimit = {1} showSelectAll={false} style={{ width: "100%", height: '100%' }}/>
         </div>
     </div> );
 }
