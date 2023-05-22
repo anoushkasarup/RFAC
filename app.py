@@ -20,9 +20,23 @@ state = {'query': 0, 'result':None, 'queryString':""}
 
 @app.route('/')
 def index():
-    if state["query"]: #fetch query and update result
-        #front end updates query string and query int and triggers a page reload? 
-        state["result"] = None #perform call and get result
+    if state["query"]:
+        # Perform the necessary API call and update the result based on the query
+        if state["query"] == 1:
+            # Logic for fetchFromTable query
+            # Make the API call, process the data, and update the state
+            state["result"] = fetch_from_table(state["queryString"])
+        elif state["query"] == 2:
+            # Logic for fetchChangeData query
+            # Make the API call, process the data, and update the state
+            state["result"] = fetch_change_data(state["queryString"])
+        elif state["query"] == 3:
+            # Logic for fetchAggregateData query
+            # Make the API call, process the data, and update the state
+            state["result"] = fetch_aggregate_data(state["queryString"])
+
+        # Reset the query after processing
+        state["query"] = 0
 
     return render_template('index.html', initial_state=state)
 
