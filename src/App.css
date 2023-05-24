@@ -16,17 +16,17 @@
 
 .App-logo {
   position: absolute;
-  left: 5%;
+  left: 11%;
   top: 4%;
   aspect-ratio: 10/3;
-  width: 33%;
+  width: 27%;
 }
 
 h1{
   position: absolute;
   color: #0c4164;
   font-family: "Rockwell";
-  font-size: 5vw;
+  font-size: 4vw;
   left: 42%;
   top: 4.5%;
 }
@@ -44,5 +44,5 @@ hr {
   position: absolute;
   aspect-ratio: 180/1;
   justify-content: center;
-  top: 48%;
+  top: 45%;
 }

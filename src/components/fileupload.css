@@ -1,0 +1,35 @@
+.upload_button{
+    position: absolute;
+    top: 41%;
+    left: 21%;
+    width: 17%;
+    height: 5%;
+}
+
+.submit_button{
+    position: absolute;
+    top: 41%;
+    left: 35%;
+    width: 7%;
+    height: 3%;  
+    text-align: center;
+    font-size: 1vw;
+    padding: 1px 4px;
+    border-width: 0px;
+    background-color: #0c4164;
+    color: #f7df37;
+}
+
+p{
+    font-family: sans-serif;
+    font-size: 1.4vw;
+    position: absolute;
+    top: 38%;
+    left: 10%;
+    color: #0c4164;
+}
+
+/* shadow button code: https://www.w3schools.com/css/css3_buttons.asp */ 
+.buttonShadow:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+} 

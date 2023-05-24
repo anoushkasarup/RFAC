@@ -2,6 +2,7 @@ import rfaclogo from './RAC_Logo_Secondary_FullColor.png';
 import './App.css';
 import Dropdown from './components/dropdown.js';
 import Button from './components/button.js';
+import Fileupload from './components/fileupload.js'
 import React, { useState } from "react";
 
 function App(){
@@ -20,6 +21,8 @@ function App(){
             <hr width="95%" 
                 align="center"
                 color=" #0c4164" noshade />
+
+            <Fileupload />
 
         </header>
     </div>
