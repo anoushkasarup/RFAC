@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, render_template
+import requests
 
 app = Flask(__name__)
 
@@ -34,11 +35,36 @@ def index():
             # Logic for fetchAggregateData query
             # Make the API call, process the data, and update the state
             state["result"] = fetch_aggregate_data(state["queryString"])
+        elif state["query"] == 4:
+            # Add CSV data to the table
+            state["result"] = add_to_table(state["queryString"])
 
         # Reset the query after processing
         state["query"] = 0
 
     return render_template('index.html', initial_state=state)
+
+def fetch_from_table(query_string):
+    pass
+
+def fetch_change_data(query_string):
+    pass
+
+def fetch_aggregate_data(query_string):
+    pass
+
+def add_to_table(query_string):
+    pass
+
+def make_api_call(endpoint):
+    try:
+        response = requests.get(endpoint)
+        response.raise_for_status()  # Raise an exception if the request was unsuccessful (status code >= 400)
+        result = response.json()  # Assuming the response is in JSON format
+        return result
+    except requests.exceptions.RequestException as e:
+        print(f"Error: {e}")
+        return None
 
 if __name__ == '__main__':
     app.run()
