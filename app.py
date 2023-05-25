@@ -44,6 +44,14 @@ def index():
 
     return render_template('index.html', initial_state=state)
 
+@app.route('/update', methods=['POST'])
+def update_state():
+    data = request.get_json()
+    state['query'] = data['query']
+    state['queryString'] = data['queryString']
+    state['result'] = None  # Reset the result to trigger re-processing
+    return jsonify(success=True)
+
 def fetch_from_table(query_string):
     #question mapping to average answer
     pass
