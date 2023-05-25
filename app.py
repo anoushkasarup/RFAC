@@ -55,7 +55,7 @@ def fetch_change_data(query_string):
 
 def fetch_aggregate_data(query_string):
     #straight output
-    pass
+    state["result"] = make_api_call(query_string)
 
 def add_to_table(query_string):
     #status output
