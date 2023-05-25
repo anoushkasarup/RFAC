@@ -21,7 +21,7 @@ state = {'query': 0, 'result':None, 'queryString':""}
 
 @app.route('/')
 def index():
-    if state["query"]:
+    if state["query"] and not state["result"]:
         # Perform the necessary API call and update the result based on the query
         if state["query"] == 1:
             # Logic for fetchFromTable query
@@ -40,20 +40,25 @@ def index():
             state["result"] = add_to_table(state["queryString"])
 
         # Reset the query after processing
-        state["query"] = 0
+        # state["query"] = 0
 
     return render_template('index.html', initial_state=state)
 
 def fetch_from_table(query_string):
+    #question mapping to average answer
     pass
 
 def fetch_change_data(query_string):
+    #question mapping to delta average as a percent of pre
+    #delta: post average - pre average
     pass
 
 def fetch_aggregate_data(query_string):
+    #straight output
     pass
 
 def add_to_table(query_string):
+    #status output
     pass
 
 def make_api_call(endpoint):
