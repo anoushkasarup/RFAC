@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request, render_template
 import requests
+import db_client
 
 app = Flask(__name__)
 
@@ -46,7 +47,20 @@ def index():
 
 def fetch_from_table(query_string):
     #question mapping to average answer
-    pass
+    result_sums = {}
+    result_counts = {}
+    all_results = make_api_call(query_string)
+    for ind_res in all_results:
+        for k,v in ind_res.items():
+            if k not in result_sums:
+                result_sums[k] = 0
+                result_counts[k] = 0
+            result_sums[k] += v
+            result_counts[k] += 1
+    result = {}
+    for q, s in all_results.items():
+        result[q] = s/result_counts[q]
+    state["result"] = result
 
 def fetch_change_data(query_string):
     #question mapping to delta average as a percent of pre
