@@ -3,7 +3,6 @@ import json
 import q_splitting
 import pandas as pd
 
-
 mapping_dict = {"ParentRelation": {"easily communicates",
                                  "communicate well",
                                  "communicate",
