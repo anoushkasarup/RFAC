@@ -5,7 +5,7 @@
 
 .dropdown-assessmentType {
   position: absolute;
-  top: 23%;
+  top: 27%;
   left: 10%;
   width: 17%;
   height: 5%;
@@ -14,7 +14,7 @@
 
 .dropdown-race {
   position: absolute;
-  top: 23%;
+  top: 27%;
   left: 50%;
   width: 17%;
   height: 5%;
@@ -22,7 +22,7 @@
 
 .dropdown-gender {
   position: absolute;
-  top: 23%;
+  top: 27%;
   left: 30%;
   width: 17%;
   height: 5%;
@@ -30,7 +30,7 @@
 
 .dropdown-typeOfLoss {
   position: absolute;
-  top: 31.5%;
+  top: 35.5%;
   left: 10%;
   width: 17%;
   height: 5%;
@@ -38,7 +38,7 @@
 
 .dropdown-level {
   position: absolute;
-  top: 31.5%;
+  top: 35.5%;
   left: 30%;
   width: 17%;
   height: 5%;
@@ -46,7 +46,7 @@
 
 .dropdown-prePost {
   position: absolute;
-  top: 31.5%;
+  top: 35.5%;
   left: 50%;
   width: 17%;
   height: 5%;
