@@ -1,7 +1,7 @@
 import boto3
 import json
-import q_splitting
 import pandas as pd
+import io
 
 mapping_dict = {"ParentRelation": {"easily communicates",
                                  "communicate well",
@@ -73,7 +73,7 @@ def add_to_dynamo_db(tablename, csv_string):
         table = dynamodb.Table(tablename)
 
         # get data to add
-        items = q_splitting.split_qs(csv_string)
+        items = split_qs(csv_string)
 
         with table.batch_writer() as batch:
             for item in items:
@@ -94,7 +94,9 @@ def add_to_dynamo_db(tablename, csv_string):
     return response
 
 def split_qs(csv_string):
-    data = pd.read_csv(csv_string)
+    
+    csv_file = io.StringIO(csv_string)
+    data = pd.read_csv(csv_file)
 
     cols = list(data.columns)
     #print(cols)
