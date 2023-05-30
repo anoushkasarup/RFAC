@@ -79,22 +79,14 @@ def add_to_dynamo_db(tablename, csv_string):
             for item in items:
                 batch.put_item(Item=item)
 
-        response = {
-            'statusCode': 200,
-            'body': json.dumps(f'data added for {tablename}')
-        }
+        return True
 
     except Exception as e:
-        print(e)
-        response = {
-            'statusCode': 500,
-            'body': json.dumps(f'an error occurred with {tablename}')
-        }
-
-    return response
+        print(e) #probably log somewhere
+        return False
 
 def split_qs(csv_string):
-    
+
     csv_file = io.StringIO(csv_string)
     data = pd.read_csv(csv_file)
 
