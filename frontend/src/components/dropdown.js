@@ -9,15 +9,14 @@ function Dropdown(){
     // Multiselect code: https://primereact.org/multiselect/
     const [selectedGender, setSelectedGender] = useState(null);
     const genders = [
-        { name: 'Male', code: 'M' },
-        { name: 'Female', code: 'F' }
+        { name: 'Male', code: 'Male' },
+        { name: 'Female', code: 'Female' }
     ];
 
     const [selectedAssessmentType, setSelectedAssessmentType] = useState(null);
     const assessmentTypes = [
-        { name: 'Parent', code: 'Prnt' },
-        { name: 'Participant', code: 'Part' },
-        { name: 'Faciliator', code: 'Fac'}
+        { name: 'Parent', code: 'Parent' },
+        { name: 'Participant', code: 'Participant' }
     ];
 
     const [selectedTypeLoss, setSelectedTypeLoss] = useState(null);
@@ -33,26 +32,26 @@ function Dropdown(){
 
     const [selectedRace, setSelectedRace] = useState(null);
     const races = [
-        { name: 'White or Caucasian', code: 'white' },
-        { name: 'Hispanic or Latino', code: 'hispanic/latino' },
-        { name: 'Black or African American', code: 'black/africanAmerican'},
-        { name: 'Multi-Racial', code: 'multi-racial'},
-        { name: 'Asian', code: 'asian'},
-        { name: 'Native Hawaiian or Other Pacific Islander', code: 'nativehawaiin'},
-        { name: 'American Indian or Alaskan Native', code: 'americanIndian'}
+        { name: 'White or Caucasian', code: 'White or Caucasian' },
+        { name: 'Hispanic or Latino', code: 'Hispanic or Latino' },
+        { name: 'Black or African American', code: 'Black or African American'},
+        { name: 'Multi-Racial', code: 'Multi-Racial'},
+        { name: 'Asian', code: 'Asian'},
+        { name: 'Native Hawaiian or Other Pacific Islander', code: 'Native Hawaiian or Other Pacific Islander'},
+        { name: 'American Indian or Alaskan Native', code: 'American Indian or Alaskan Native'}
     ];
 
     const [selectedLevel, setSelectedLevel] = useState(null);
     const levels = [
-        { name: 'Sunbeams (Pre-K)', code: 'sunbeams' },
-        { name: 'Rainbows (Grades 1-6)', code: 'rainbows' },
-        { name: 'Spectrum (Grades 7-12)', code: 'spectrum'}
+        { name: 'Sunbeams (Pre-K)', code: 'Sunbeam' },
+        { name: 'Rainbows (Grades 1-6)', code: 'Rainbow' },
+        { name: 'Spectrum (Grades 7-12)', code: 'Spectrum'}
     ];
 
     const [selectedPrePost, setSelectedPrePost] = useState(null);
     const prePost = [
-        { name: 'Pre Data', code: 'pre' },
-        { name: 'Post Data', code: 'post' }
+        { name: 'Pre Data', code: 'Pre' },
+        { name: 'Post Data', code: 'Post' }
     ];
 
     return (
@@ -68,7 +67,7 @@ function Dropdown(){
             <MultiSelect value={selectedAssessmentType} onChange={(e) => setSelectedAssessmentType(e.value)} options={assessmentTypes} optionLabel="name" 
             placeholder="Assessment Type" maxSelectedLabels={3} style={{ width: "100%", height: '100%' }}/>
         </div>
-
+        
         <div className="dropdown-typeOfLoss">
             <MultiSelect value={selectedTypeLoss} onChange={(e) => setSelectedTypeLoss(e.value)} options={typeOfLoss} optionLabel="name" 
             placeholder="Type of loss" maxSelectedLabels={3} style={{ width: "100%", height: '100%' }}/>
