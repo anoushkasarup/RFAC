@@ -1,0 +1,16 @@
+.piechart{
+    position: relative;
+    right: 400px;   
+    top: 200px; 
+}
+
+.pie-legend{
+    font-family: sans-serif;
+    font-size: large;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    position:absolute;
+    left: 35%;
+    top: 63%;
+}
