@@ -24,7 +24,7 @@ base_url = 'https://4nh98bdxtj.execute-api.us-east-1.amazonaws.com/'
 
 @app.route('/')
 def index():
-    if state["query"] and not state["result"]:
+    if state["query"] and state["result"] is not None:
         # Perform the necessary API call and update the result based on the query
         if state["query"] == 1:
             # Logic for fetchFromTable query
@@ -120,7 +120,11 @@ def fetch_aggregate_data(query_details):
 
 def add_to_table(query_details):
     #status output
-    pass
+    if db_client.add_to_dynamo_db(query_details["tableName"], query_details["csv_string"]):
+        state["result"] = True
+    else:
+        state["result"] = False
+
 
 def make_api_call(endpoint):
     try:
