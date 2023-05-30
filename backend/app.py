@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 import requests
-import db_client
+import backend.db_client as db_client
 import json
 
 app = Flask(__name__)
@@ -22,7 +22,7 @@ base_url = 'https://4nh98bdxtj.execute-api.us-east-1.amazonaws.com/'
 # 1. Making API calls - from where, building query, storing results
 # 2. Adding CSV data (API post call)
 
-@app.route('/')
+@app.route('/', methods=["GET"])
 def index():
     if state["query"] and state["result"] is not None:
         # Perform the necessary API call and update the result based on the query
