@@ -45,7 +45,7 @@ def index():
         # Reset the query after processing
         # state["query"] = 0
 
-    return render_template('index.html', initial_state=state)
+    return jsonify(state)
 
 @app.route('/update', methods=['POST'])
 def update_state():
