@@ -1,18 +1,28 @@
 import './fileupload.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
-// template code for fileupload: https://www.filestack.com/fileschool/react/react-file-upload/
+// https://www.filestack.com/fileschool/react/react-file-upload/
 function Fileupload() {
-
-  const [file, setFile] = useState()
+  const [file, setFile] = useState();
 
   function handleChange(event) {
-    setFile(event.target.files[0])
+    setFile(event.target.files[0]);
   }
-  
+
   function handleSubmit(event) {
-    event.preventDefault()
+    event.preventDefault();
+
+    // ChatGPT code for file contents as string
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const fileContents = e.target.result;
+      
+      console.log(fileContents);
+      console.log(typeof fileContents);
+    };
+    reader.readAsText(file); // Read the file as text
+
     const url = 'http://localhost:3000/uploadFile';
     const formData = new FormData();
     formData.append('file', file);
@@ -25,7 +35,6 @@ function Fileupload() {
     axios.post(url, formData, config).then((response) => {
       console.log(response.data);
     });
-
   }
 
   return (
@@ -33,7 +42,6 @@ function Fileupload() {
       <p>
         <u>Upload csv files:</u>
       </p>
-      {/* Code for hiding submit button until a file is uploaded from ChatGPT*/}
       <form onSubmit={handleSubmit}>
         <input className="upload_button" type="file" onChange={handleChange} />
         {file && (
