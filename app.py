@@ -53,7 +53,8 @@ def update_state():
     #query_details = {
     #    "tableName":"ParticipantRainbow",
     #    "filters":{"Gender":["Male"], "RaceEthnicity":["White or Caucasian"]},
-    #    "outputCol":"PersonalBehavior"
+    #    "outputCol":"PersonalBehavior",
+    #    "category": "Rainbow"
     #}
     data = request.get_json()
     state['query'] = data['query']
