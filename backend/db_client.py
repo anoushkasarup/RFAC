@@ -111,6 +111,8 @@ def split_qs(csv_string):
                 classification[id] = "Gender"
             elif "race" in col:
                 classification[id] = "RaceEthnicity"
+            elif "loss" in col:
+                classification[id] = "TypeLoss"
             else:
                 classification[id] = None
 
