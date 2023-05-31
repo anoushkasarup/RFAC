@@ -32,8 +32,8 @@ function Dropdown(){
 
     const [selectedRace, setSelectedRace] = useState(null);
     const races = [
-        { name: 'White or Caucasian', code: 'White or Caucasian' },
-        { name: 'Hispanic or Latino', code: 'Hispanic or Latino' },
+        { name: 'White or Caucasian', code: 'White or Caucasian'},
+        { name: 'Hispanic or Latino', code: 'Hispanic or Latino'},
         { name: 'Black or African American', code: 'Black or African American'},
         { name: 'Multi-Racial', code: 'Multi-Racial'},
         { name: 'Asian', code: 'Asian'},

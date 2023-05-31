@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 import requests
-import backend.db_client as db_client
+import db_client as db_client
 import json
 
 app = Flask(__name__)
@@ -69,7 +69,6 @@ def update_state():
 
     if data["outputCol"] == "Aggregate":
         state["query"] = 3
-    
     
     query_details = {}
     query_details["category"] = data["category"] 
