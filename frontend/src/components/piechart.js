@@ -41,23 +41,26 @@ function Pie() {
   const data = transformInput(inputData);
 
   // Note: Piechart will only label values on the pie chart that are more than 10% of the total
-  //       This is to avoid a thin scection with overflowing words
+  //       This is to avoid a thin section with overflowing words
   return (
     <div>
-      <PieChart
-        className="piechart"
-        data={data}
-        radius={50}
-        label={({ dataEntry }) =>
-          dataEntry.value > 0.1 * totalValue ? `${dataEntry.title}: ${dataEntry.value}` : ''
-        }
-        labelPosition={60}
-        labelStyle={{
-          fontSize: '4px',
-          fontFamily: 'sans-serif',
-          fill: '#FFFFFF',
-        }}
-      />
+      <div className="pie-container">
+        <PieChart
+          data={data}
+          radius={50}
+          center={[50,50]}
+          viewBoxSize={[100,100]}
+          label={({ dataEntry }) =>
+            dataEntry.value > 0.1 * totalValue ? `${dataEntry.title}: ${dataEntry.value}` : ''
+          }
+          labelPosition={60}
+          labelStyle={{
+            fontSize: '4px',
+            fontFamily: 'sans-serif',
+            fill: '#FFFFFF',
+          }}
+        />
+      </div>
       <div className="pie-legend">
         {data.map((dataEntry, index) => (
           <div key={index}>

@@ -31,6 +31,9 @@ function App(){
             <Slider/>
 
         </header>
+        {/* <Pie />
+
+        <Slider/> */}
     </div>
   );
 }

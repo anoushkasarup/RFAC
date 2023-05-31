@@ -2,6 +2,9 @@
 
 .App {
   background-color: #00b2e4;
+  overflow: auto;
+  /* min-height: 300px;
+  min-width: 500px; */
 }
 
 .App-header {
@@ -35,8 +38,8 @@ h1{
 .vl {
   position: absolute;
   border-left: 0.5vw solid #0c4164;
-  aspect-ratio: 1/18;
-  top: 5%;
+  aspect-ratio: 1/16;
+  top: 4%;
   left: 39%;
 }
 

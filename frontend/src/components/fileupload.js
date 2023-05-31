@@ -1,13 +1,16 @@
 import './fileupload.css';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import axios from 'axios';
 
 // https://www.filestack.com/fileschool/react/react-file-upload/
 function Fileupload() {
+  const fileInputRef = useRef(null);
   const [file, setFile] = useState();
+  const [showUploadButton, setShowUploadButton] = useState(true);
 
   function handleChange(event) {
     setFile(event.target.files[0]);
+    setShowUploadButton(true)
   }
 
   function handleSubmit(event) {
@@ -20,6 +23,8 @@ function Fileupload() {
       
       console.log(fileContents);
       console.log(typeof fileContents);
+      setFile(null);
+      setShowUploadButton(false);
     };
     reader.readAsText(file); // Read the file as text
 
@@ -34,18 +39,23 @@ function Fileupload() {
     };
     axios.post(url, formData, config).then((response) => {
       console.log(response.data);
+      setShowUploadButton(false);
     });
   }
 
+  function clearFile() {
+    fileInputRef.current.value = '';
+  }
+
   return (
-    <div className="App">
+    <div className="test">
       <p>
         <u>Upload csv files:</u>
       </p>
       <form onSubmit={handleSubmit}>
-        <input className="upload_button" type="file" onChange={handleChange} />
-        {file && (
-          <button className="submit_button buttonShadow" type="submit">
+        <input ref={fileInputRef} className="upload_button" type="file" onChange={handleChange} />
+        {file && showUploadButton && (
+          <button onClick={clearFile} className="submit_button buttonShadow" type="submit">
             Upload
           </button>
         )}
