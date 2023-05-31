@@ -51,7 +51,18 @@ function Dropdown(){
     const [selectedPrePost, setSelectedPrePost] = useState(null);
     const prePost = [
         { name: 'Pre Data', code: 'Pre' },
-        { name: 'Post Data', code: 'Post' }
+        { name: 'Post Data', code: 'Post'}, 
+        {name: 'Change in Data', code: 'Change'}
+    ];
+
+    const [selectedOutputCol, setSelectedOutputCol] = useState(null);
+    const outputCol = [
+        { name: 'Personal Behavior', code: 'PersonalBehavior'},
+        { name: 'School Performance', code: 'SchoolPerformance'}, 
+        { name: 'Group Performance', code: 'GroupPerformance'},
+        { name: 'Feedback', code: 'Feedback'},
+        { name: 'Parent Relation', code: 'ParentRelation'},
+        { name: 'Aggregate Data', code: 'AggregateData'}
     ];
 
     return (
@@ -86,6 +97,10 @@ function Dropdown(){
         <div className="dropdown-prePost">
             <MultiSelect value={selectedPrePost} onChange={(e) => setSelectedPrePost(e.value)} options={prePost} optionLabel="name" 
             placeholder="Pre/Post Data" maxSelectedLabels={3} selectionLimit = {1} showSelectAll={false} style={{ width: "100%", height: '100%' }}/>
+        </div>
+        <div className="dropdown-outputCol">
+            <MultiSelect value={selectedOutputCol} onChange={(e) => setSelectedOutputCol(e.value)} options={outputCol} optionLabel="name" 
+            placeholder="Output Column" maxSelectedLabels={1} selectionLimit = {1} showSelectAll={false} style={{ width: "100%", height: '100%' }}/>
         </div>
     </div> );
 }
