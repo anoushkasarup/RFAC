@@ -21,13 +21,13 @@ function Dropdown(){
 
     const [selectedTypeLoss, setSelectedTypeLoss] = useState(null);
     const typeOfLoss = [
-        { name: 'Parents’ divorce or separation', code: 'divorce' },
-        { name: 'Death of a parent or loved one', code: 'death' },
-        { name: 'Military deployment of a parent or loved one', code: 'military' },
-        { name: 'Incarceration of a parent or loved one', code: 'incarceration' },
-        { name: 'Life-threatening illness of a parent or loved one', code: 'illness' },
-        { name: 'Abandonment of a parent or loved one', code: 'abandonment' },
-        { name: 'Deportation of a parent or loved one', code: 'deportation' }
+        { name: 'Parents\’ divorce or separation', code: 'Parents\’ divorce or separation'},
+        { name: 'Death of a parent or loved one', code: 'Death of a parent or loved one' },
+        { name: 'Military deployment of a parent or loved one', code: 'Military deployment of a parent or loved one'},
+        { name: 'Incarceration of a parent or loved one', code: 'Incarceration of a parent or loved one'},
+        { name: 'Life-threatening illness of a parent or loved one', code: 'Life-threatening illness of a parent or loved one' },
+        { name: 'Abandonment of a parent or loved one', code: 'Abandonment of a parent or loved one'},
+        { name: 'Deportation of a parent or loved one', code: 'Deportation of a parent or loved one'}
     ];
 
     const [selectedRace, setSelectedRace] = useState(null);
@@ -51,18 +51,7 @@ function Dropdown(){
     const [selectedPrePost, setSelectedPrePost] = useState(null);
     const prePost = [
         { name: 'Pre Data', code: 'Pre' },
-        { name: 'Post Data', code: 'Post'}, 
-        {name: 'Change in Data', code: 'Change'}
-    ];
-
-    const [selectedOutputCol, setSelectedOutputCol] = useState(null);
-    const outputCol = [
-        { name: 'Personal Behavior', code: 'PersonalBehavior'},
-        { name: 'School Performance', code: 'SchoolPerformance'}, 
-        { name: 'Group Performance', code: 'GroupPerformance'},
-        { name: 'Feedback', code: 'Feedback'},
-        { name: 'Parent Relation', code: 'ParentRelation'},
-        { name: 'Aggregate Data', code: 'AggregateData'}
+        { name: 'Post Data', code: 'Post' }
     ];
 
     return (
@@ -97,10 +86,6 @@ function Dropdown(){
         <div className="dropdown-prePost">
             <MultiSelect value={selectedPrePost} onChange={(e) => setSelectedPrePost(e.value)} options={prePost} optionLabel="name" 
             placeholder="Pre/Post Data" maxSelectedLabels={3} selectionLimit = {1} showSelectAll={false} style={{ width: "100%", height: '100%' }}/>
-        </div>
-        <div className="dropdown-outputCol">
-            <MultiSelect value={selectedOutputCol} onChange={(e) => setSelectedOutputCol(e.value)} options={outputCol} optionLabel="name" 
-            placeholder="Output Column" maxSelectedLabels={1} selectionLimit = {1} showSelectAll={false} style={{ width: "100%", height: '100%' }}/>
         </div>
     </div> );
 }
