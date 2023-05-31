@@ -9,6 +9,8 @@ import Slider from './components/slider.js';
 
 function App(){
 
+  
+
   return (
     <div className="App">
         <header className="App-header">

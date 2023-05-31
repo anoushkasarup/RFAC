@@ -1,10 +1,17 @@
 import './button.css';
 import React from 'react';
+import './dropdown.js';
 
 function Button() {
 
-    function sayHello() {
-        alert('Getting data visualizations');
+    var query_details = {
+        filters: {},
+        outputCol: "",
+        category: ""
+    }
+
+    function queryDetails() {
+        query_details[filters];
     }
 
     return (

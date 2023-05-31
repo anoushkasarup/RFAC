@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request, render_template, redirect, url_for
 import requests
-import backend.db_client as db_client
+import db_client as db_client
 import json
 
 app = Flask(__name__)
@@ -24,7 +24,7 @@ base_url = 'https://4nh98bdxtj.execute-api.us-east-1.amazonaws.com/'
 
 @app.route('/', methods=["GET"])
 def index():
-    if state["query"] and state["result"] is not None:
+    if state["query"] and state["result"] is None:
         # Perform the necessary API call and update the result based on the query
         if state["query"] == 1:
             # Logic for fetchFromTable query
@@ -36,7 +36,7 @@ def index():
             state["result"] = fetch_change_data(state["queryDetails"])
         elif state["query"] == 3:
             # Logic for fetchAggregateData query
-            # Make the API call, process the data, and update the state
+             # Make the API call, process the data, and update the state
             state["result"] = fetch_aggregate_data(state["queryDetails"])
         elif state["query"] == 4:
             # Add CSV data to the table
@@ -45,35 +45,39 @@ def index():
         # Reset the query after processing
         # state["query"] = 0
 
-    return jsonify(state)
+    return jsonify(state["result"])
 
 @app.route('/update', methods=['POST'])
 def update_state():
     #example queryDetails obj
     #query_details = {
-    #    "tableName":"ParticipantRainbow",
+    #    "csvData": ""
     #    "filters":{"Gender":["Male"], "RaceEthnicity":["White or Caucasian"]},
     #    "outputCol":"PersonalBehavior",
-    #    "category": "Rainbow"
+    #    "category": "Rainbow", 
+    #    "time": ["Pre", "Post"],
+    #    "person": ["Participant", "Parent"]
     #}
     data = request.get_json()
-    state['query'] = data['query']
-    state['queryDetails'] = validate_details(data['queryDetails'])
-    state['result'] = None  # Reset the result to trigger re-processing
-    return redirect(url_for(index))
 
-def validate_details(query_details):
-    if "tableName" not in query_details:
-        query_details["tableName"] = ""
-    if "filters" not in query_details:
-        query_details["filters"] = {}
-    if "outputCol" not in query_details:
-        query_details["outputCol"] = ""
-    if "category" not in query_details:
-        query_details["category"] = "All"
-    if "csvData" not in query_details:
-        query_details["csvData"] = ""
-    return query_details
+    #set state['query']
+    #state['query'] = data['query']
+    if data["time"] == ["Change"]:
+        state["query"] = 2
+    else:
+        state["query"] = 1
+
+    if data["outputCol"] == "Aggregate":
+        state["query"] = 3
+    
+    query_details = {}
+    query_details["category"] = data["category"] 
+    query_details["filters"] = data["filters"]
+    query_details["outputCol"] = data["outputCol"]
+    query_details["tableName"] = data["time"] + data["person"] + data["category"]
+    state['queryDetails'] = query_details
+    state['result'] = None  # Reset the result to trigger re-processing
+    return 
 
 def generate_query_string(fn_name, table_string, table_name,filters,output_col):
     #'https://4nh98bdxtj.execute-api.us-east-1.amazonaws.com/fetchFromTable?tableName=PostParticipantRainbow&filters={"Gender":["Male"], "RaceEthnicity": ["White or Caucasian"]}&outputCol=PersonalBehavior'

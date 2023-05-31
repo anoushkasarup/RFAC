@@ -21,19 +21,19 @@ function Dropdown(){
 
     const [selectedTypeLoss, setSelectedTypeLoss] = useState(null);
     const typeOfLoss = [
-        { name: 'Parents’ divorce or separation', code: 'divorce' },
-        { name: 'Death of a parent or loved one', code: 'death' },
-        { name: 'Military deployment of a parent or loved one', code: 'military' },
-        { name: 'Incarceration of a parent or loved one', code: 'incarceration' },
-        { name: 'Life-threatening illness of a parent or loved one', code: 'illness' },
-        { name: 'Abandonment of a parent or loved one', code: 'abandonment' },
-        { name: 'Deportation of a parent or loved one', code: 'deportation' }
+        { name: 'Parents\’ divorce or separation', code: 'Parents\’ divorce or separation'},
+        { name: 'Death of a parent or loved one', code: 'Death of a parent or loved one' },
+        { name: 'Military deployment of a parent or loved one', code: 'Military deployment of a parent or loved one'},
+        { name: 'Incarceration of a parent or loved one', code: 'Incarceration of a parent or loved one'},
+        { name: 'Life-threatening illness of a parent or loved one', code: 'Life-threatening illness of a parent or loved one' },
+        { name: 'Abandonment of a parent or loved one', code: 'Abandonment of a parent or loved one'},
+        { name: 'Deportation of a parent or loved one', code: 'Deportation of a parent or loved one'}
     ];
 
     const [selectedRace, setSelectedRace] = useState(null);
     const races = [
-        { name: 'White or Caucasian', code: 'White or Caucasian' },
-        { name: 'Hispanic or Latino', code: 'Hispanic or Latino' },
+        { name: 'White or Caucasian', code: 'White or Caucasian'},
+        { name: 'Hispanic or Latino', code: 'Hispanic or Latino'},
         { name: 'Black or African American', code: 'Black or African American'},
         { name: 'Multi-Racial', code: 'Multi-Racial'},
         { name: 'Asian', code: 'Asian'},
