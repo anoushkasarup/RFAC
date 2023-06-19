@@ -1,14 +1,15 @@
 import './slider.css';
 import React from 'react';
 
-function Slider() {
+function Slider({inputData}) {
   // Test Input
-  const inputData = [
-    {'I try to get all the facts before attempting to solve a problem': 5 },
-    { 'I seek out help when I need it': 3 },
-    { 'It helps to talk about my feelings': 2 },
-    { 'I can share my feelings with a family member or friend': 4}
-  ];
+  //const inputData = [
+   // {'I try to get all the facts before attempting to solve a problem': 5 },
+   // { 'I seek out help when I need it': 3 },
+   // { 'It helps to talk about my feelings': 2 },
+   // { 'I can share my feelings with a family member or friend': 4}
+  //];
+
 
   return (
     <table className="slider-container">

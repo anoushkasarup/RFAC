@@ -1,7 +1,10 @@
+
+ 
  .slider-container {
     position: absolute;
-    left: 50%;
-    top: 50%;
+    left: 20%;
+    top: 60%;
+    background-color: #00b2e4;
 }
    
 .slider-item {

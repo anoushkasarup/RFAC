@@ -9,8 +9,6 @@ import Slider from './components/slider.js';
 
 function App(){
 
-  
-
   return (
     <div className="App">
         <header className="App-header">
@@ -20,7 +18,6 @@ function App(){
             <h1>Data Visualizer</h1>
 
             <Dropdown/>
-            <Button />
          
             <hr width="95%" 
                 align="center"
@@ -28,9 +25,6 @@ function App(){
 
             <Fileupload />
             
-            <Pie />
-
-            <Slider/>
 
         </header>
     </div>

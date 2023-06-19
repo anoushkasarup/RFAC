@@ -62,13 +62,12 @@ def update_state():
 
     #set state['query']
     #state['query'] = data['query']
-    if data["time"] == ["Change"]:
+    if data["time"] == ["Change"] and data["outputCol"] != "Aggregate":
         state["query"] = 2
+    elif data["outputCol"] == "Aggregate":
+        state["query"] = 3
     else:
         state["query"] = 1
-
-    if data["outputCol"] == "Aggregate":
-        state["query"] = 3
     
     
     query_details = {}

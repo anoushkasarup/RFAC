@@ -4,6 +4,10 @@
   background-color: #00b2e4;
 }
 
+body {
+  background-color: #00b2e4;
+}
+
 .App-header {
   background-color: #00b2e4;
   min-height: 100vh;
@@ -44,5 +48,5 @@ hr {
   position: absolute;
   aspect-ratio: 180/1;
   justify-content: center;
-  top: 45%;
+  top: 55%;
 }

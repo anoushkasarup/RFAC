@@ -2,7 +2,7 @@ import './piechart.css';
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
-function Pie() {
+function Pie({inputData}) {
   // Transform input code and getting random color from ChatGPT
   function transformInput(input) {
     var output = [];
@@ -27,13 +27,6 @@ function Pie() {
   }
 
   // Test Input
-  const inputData = [
-    { 'One': 5 },
-    { 'Two': 15 },
-    { 'Three': 20 },
-    { 'Four': 12 }
-  ];
-
   // Calculate total value
   const totalValue = inputData.reduce((total, entry) => total + Object.values(entry)[0], 0);
 
