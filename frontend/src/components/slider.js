@@ -18,7 +18,7 @@ function Slider({inputData}) {
         const value = item[key];
 
         const dotStyle = {
-          left: `${(value - 1) * 125}px`,
+          left: `calc(50% + ${(value-3)}*125px)`,
           backgroundColor: '#f7df37'
         };
 
@@ -36,7 +36,7 @@ function Slider({inputData}) {
           <tr key={index} className="slider-item">
             {key}
             <div> 
-              <hr className="slider-lines" width="500x" align="center" color="#0c4164" noshade />
+              <hr className="slider-lines" width="500px" align="center" color="#0c4164" noshade />
               <div className="dot" style={dotStyle}>
                 <span className="dot-value" style={dotValueStyle}>{value}</span>
               </div>

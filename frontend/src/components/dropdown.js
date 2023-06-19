@@ -71,7 +71,7 @@ export function Dropdown(){
     'What happened is not my fault: 0.27',
     'When I have a problem, I think of what is true and what is not true: 0.28'];
 
-    const d2 = [{'My child has been attending school regularly during the time he or she has been in Rainbows': 4.36},
+    const d2 = [{'My child has been attending school regularly during the time he or she has been in Rainbows': 5.00},
     {'My child has demonstrated good behavior in school during the time he or she has been in Rainbows': 3.82}];
 
     const d3 = [{'Black or African American': 17},
