@@ -3,7 +3,10 @@ import requests
 import backend.db_client as db_client
 import json
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+CORS(app)
 
 # Global variable for storing state
 
