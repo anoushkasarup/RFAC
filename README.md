@@ -1,6 +1,12 @@
 # RFAC Data Visualizer
-Created specifically for the needs of the Rainbows for All Children non-profit in Evanston.
-Allows volunteers to visualize survey data and draw accurate conclusions by allowing for filtering and different types of visual representations. 
+Created specifically for the needs of the Rainbows for All Children mental health non-profit in Evanston.
+Allows RFAC personnel to visualize survey data and make strategic data-driven decisions by allowing for filtering and different types of visual representations. 
+
+## Problem Statement
+RFAC currently stores data in large Excel sheets. This data comes from surveys given to participants regarding their experiences. Our client is unable to manage the data and draw accurate conclusions based on the survey results. They want a streamlined process for the organization, retrieval and visualization of data to be able to show volunteers and other staff members.
+
+## User Story
+Open the application and filter by/select specific categories of data that they wish to view. Choose type of visualization. 
 
 ## Instructions
 1. Add CSV file with student records.
